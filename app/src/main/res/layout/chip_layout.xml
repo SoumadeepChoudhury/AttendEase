@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.google.android.material.chip.Chip
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        style="@style/Widget.Material3.Chip.Input.Icon.Elevated"
+        android:id="@+id/subject"
+        android:clickable="false"
+        android:visibility="gone"/>
+    <LinearLayout
+        android:id="@+id/subjectEditLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="40sp"
+        android:orientation="horizontal"
+        style="@style/Widget.Material3.Chip.Input.Elevated"
+        android:background="@drawable/chip_background"
+        android:padding="10sp"
+        android:layout_gravity="center_vertical">
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/subjectEdit"
+            android:autofillHints="Subject"
+            android:textSize="20sp"
+            android:background="#000000"
+            android:inputType="text"
+            style="@style/Widget.Material3.Chip.Input"
+            android:hint="@string/addSubject"/>
+        <ImageView
+            android:id="@+id/deleteSubject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Delete Subject"
+            android:src="@drawable/cancel"/>
+    </LinearLayout>
+</FrameLayout>

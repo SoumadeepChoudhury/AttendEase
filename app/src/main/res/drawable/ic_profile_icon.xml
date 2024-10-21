@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#FFFFFF"/> <!-- Inner circle color -->
+            <padding
+                android:left="10dp"
+                android:top="10dp"
+                android:right="10dp"
+                android:bottom="10dp"/>
+        </shape>
+    </item>
+    <item android:width="300sp" android:height="300sp" android:drawable="@drawable/ic_user"/>
+
+</layer-list>

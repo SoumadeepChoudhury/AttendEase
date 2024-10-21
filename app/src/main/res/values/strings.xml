@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">AttendEase</string>
+    <string name="app_desc">Manage your attendance with Ease.</string>
+    <string name="name">Name</string>
+    <string name="name_hint">Enter Your Name</string>
+    <string name="email">Email</string>
+    <string name="email_hint">Enter Your Email</string>
+    <string name="course">Course</string>
+    <string name="course_hint">Enter Course</string>
+    <string name="term">Term</string>
+    <string name="term_hint">Enter Term</string>
+    <string name="subjects">Subjects</string>
+    <string name="done">Done</string>
+    <string name="addSubject">Add subject</string>
+    <string name="classes">Classes</string>
+    <string name="status">Status: </string>
+    <string name="select_Subject">Select Subject: </string>
+    <string name="present">Present</string>
+    <string name="absent">Absent</string>
+    <string name="colon">:</string>
+    <string name="overview">Overview</string>
+    <string name="overviewDesc">Get a glance of your record.</string>
+    <string name="totalSubjects">Total Subjects</string>
+    <string name="totalClasses">Total Classes</string>
+    <string name="totalClassesAttended">Classes Attended</string>
+    <string name="percentage">Overall \nPercentage</string>
+    <string name="totalClassesConducted">Total Classes Conducted:</string>
+    <string name="classesAttended">Classes Attended:</string>
+    <string name="percentageEach">Percentage:</string>
+</resources>
