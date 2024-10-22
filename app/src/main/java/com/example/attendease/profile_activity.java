@@ -42,6 +42,8 @@ import java.util.Objects;
 
 public class profile_activity extends AppCompatActivity {
 
+    private float x1,x2;
+    static final int MIN_DISTANCE = 150;
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
@@ -416,5 +418,38 @@ public class profile_activity extends AppCompatActivity {
                 subjectChipGroup.addView(subjectView);
             }
         });
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Variables VARIABLES = Variables.getInstance();
+        JSONParser jsonParser = new JSONParser();
+        jsonParser.updateJSONFile(VARIABLES.userData);
+
+        //Update existing UI if changed
+        VARIABLES.selectedDate.setValue(new Date());
+
+        //Change the course and term if either is empty
+        if(VARIABLES.term.getValue().isEmpty() || VARIABLES.term.getValue() == null){
+            VARIABLES.course.setValue(VARIABLES.prevCourseTemp);
+            try {
+                JSONArray courseArray = VARIABLES.userData.getJSONArray("courses");
+                for (int i =0;i<courseArray.length();i++){
+                    if(Objects.equals(courseArray.get(i),VARIABLES.prevCourseTemp)){
+                        courseArray.remove(i);
+                        break;
+                    }
+                }
+                courseArray.put(VARIABLES.prevCourseTemp);
+                VARIABLES.userData.put("courses",courseArray);
+                new JSONParser().updateJSONFile(VARIABLES.userData);
+            } catch (JSONException e) {
+                throw new RuntimeException(e);
+            }
+            VARIABLES.prevCourseTemp = "";
+        }
+
     }
 }
