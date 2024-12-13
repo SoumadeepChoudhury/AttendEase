@@ -158,17 +158,21 @@
         app:layout_constraintStart_toEndOf="@+id/textField"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout4" />
 
+<ScrollView
+    android:id="@+id/subjectChipgroupScrollview"
+    android:layout_width="match_parent"
+    android:layout_height="400sp"
+    android:layout_marginTop="10sp"
+    android:layout_marginEnd="20sp"
+    app:layout_constraintHeight_min="150sp"
+    android:background="@drawable/rounded_edittext"
+    app:layout_constraintTop_toBottomOf="@+id/textField">
     <com.google.android.material.chip.ChipGroup
         android:id="@+id/subjectChipGroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintHeight_min="150sp"
-        android:layout_marginTop="10sp"
-        android:layout_marginEnd="20sp"
-        android:background="@drawable/rounded_edittext"
-        android:minHeight="100sp"
-        app:layout_constraintTop_toBottomOf="@+id/textField" />
-
+        />
+</ScrollView>
     <ImageButton
         android:id="@+id/addButton"
         android:layout_width="48sp"
@@ -179,7 +183,7 @@
         android:src="@drawable/ic_plus"
         android:scaleType="fitXY"
         android:padding="8sp"
-        app:layout_constraintBottom_toBottomOf="@+id/subjectChipGroup"
-        app:layout_constraintEnd_toEndOf="@+id/subjectChipGroup" />
+        app:layout_constraintBottom_toBottomOf="@+id/subjectChipgroupScrollview"
+        app:layout_constraintEnd_toEndOf="@+id/subjectChipgroupScrollview" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

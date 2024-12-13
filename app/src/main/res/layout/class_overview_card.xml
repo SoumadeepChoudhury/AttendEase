@@ -2,9 +2,10 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="200sp"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:elevation="10sp"
+    app:layout_constraintHeight_min="200sp"
     android:layout_marginBottom="10sp"
     app:cardCornerRadius="20sp">
     <androidx.constraintlayout.widget.ConstraintLayout
